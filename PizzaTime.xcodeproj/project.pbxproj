@@ -17,7 +17,6 @@
 		535D959A1E304D35009D3E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 535D95991E304D35009D3E38 /* Assets.xcassets */; };
 		535D959D1E304D35009D3E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 535D959B1E304D35009D3E38 /* LaunchScreen.storyboard */; };
 		535D95A51E304EF9009D3E38 /* iOS Take Home Assignment.json in Resources */ = {isa = PBXBuildFile; fileRef = 535D95A41E304EF9009D3E38 /* iOS Take Home Assignment.json */; };
-		535D95A71E3127DC009D3E38 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 535D95A61E30526A009D3E38 /* test.json */; };
 		5396CF2C1E32FC670058AF9E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5396CF2B1E32FC670058AF9E /* Order.swift */; };
 		5396CF361E35C13C0058AF9E /* Topping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5396CF351E35C13C0058AF9E /* Topping.swift */; };
 		5396CF381E35C5680058AF9E /* ToppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5396CF371E35C5680058AF9E /* ToppingViewController.swift */; };
@@ -29,7 +28,6 @@
 		53A209CD1E38469A00D18D97 /* Ingredient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A209C91E38469A00D18D97 /* Ingredient+CoreDataProperties.swift */; };
 		53A209CE1E38469A00D18D97 /* Pizza+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A209CA1E38469A00D18D97 /* Pizza+CoreDataClass.swift */; };
 		53A209CF1E38469A00D18D97 /* Pizza+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A209CB1E38469A00D18D97 /* Pizza+CoreDataProperties.swift */; };
-		53A20A181E3863C300D18D97 /* TestProject2.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 53A20A171E3863C300D18D97 /* TestProject2.xcdatamodel */; };
 		53EFCA931E36D23A001BCDFA /* IngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EFCA921E36D23A001BCDFA /* IngredientViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +44,6 @@
 		535D959C1E304D35009D3E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		535D959E1E304D35009D3E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		535D95A41E304EF9009D3E38 /* iOS Take Home Assignment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "iOS Take Home Assignment.json"; sourceTree = "<group>"; };
-		535D95A61E30526A009D3E38 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		5396CF2B1E32FC670058AF9E /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		5396CF351E35C13C0058AF9E /* Topping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topping.swift; sourceTree = "<group>"; };
 		5396CF371E35C5680058AF9E /* ToppingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToppingViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +55,6 @@
 		53A209C91E38469A00D18D97 /* Ingredient+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ingredient+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		53A209CA1E38469A00D18D97 /* Pizza+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pizza+CoreDataClass.swift"; sourceTree = "<group>"; };
 		53A209CB1E38469A00D18D97 /* Pizza+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pizza+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		53A20A171E3863C300D18D97 /* TestProject2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestProject2.xcdatamodel; sourceTree = "<group>"; };
 		53EFCA921E36D23A001BCDFA /* IngredientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,10 +99,8 @@
 				535D959B1E304D35009D3E38 /* LaunchScreen.storyboard */,
 				535D959E1E304D35009D3E38 /* Info.plist */,
 				535D95A41E304EF9009D3E38 /* iOS Take Home Assignment.json */,
-				535D95A61E30526A009D3E38 /* test.json */,
 				5396CF351E35C13C0058AF9E /* Topping.swift */,
 				5396CF3D1E368C690058AF9E /* PizzaTimeModel.xcdatamodeld */,
-				53A20A171E3863C300D18D97 /* TestProject2.xcdatamodel */,
 				53A209C81E38469A00D18D97 /* Ingredient+CoreDataClass.swift */,
 				53A209C91E38469A00D18D97 /* Ingredient+CoreDataProperties.swift */,
 				53A209CA1E38469A00D18D97 /* Pizza+CoreDataClass.swift */,
@@ -183,7 +177,6 @@
 			files = (
 				535D959D1E304D35009D3E38 /* LaunchScreen.storyboard in Resources */,
 				535D959A1E304D35009D3E38 /* Assets.xcassets in Resources */,
-				535D95A71E3127DC009D3E38 /* test.json in Resources */,
 				535D95981E304D34009D3E38 /* Main.storyboard in Resources */,
 				535D95A51E304EF9009D3E38 /* iOS Take Home Assignment.json in Resources */,
 			);
@@ -212,7 +205,6 @@
 				53EFCA931E36D23A001BCDFA /* IngredientViewController.swift in Sources */,
 				53A209CC1E38469A00D18D97 /* Ingredient+CoreDataClass.swift in Sources */,
 				533DF8951E3AC82000C86726 /* IngredientStore.swift in Sources */,
-				53A20A181E3863C300D18D97 /* TestProject2.xcdatamodel in Sources */,
 				53A209CE1E38469A00D18D97 /* Pizza+CoreDataClass.swift in Sources */,
 				5396CF3F1E368C690058AF9E /* PizzaTimeModel.xcdatamodeld in Sources */,
 			);
