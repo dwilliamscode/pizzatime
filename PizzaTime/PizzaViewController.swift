@@ -178,12 +178,6 @@ class PizzaViewController: UITableViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    
-//    guard let appDelegate =
-//      UIApplication.shared.delegate as? AppDelegate else {
-//        return
-//    }
-    
     let managedContext = coreDataStack.managedContext
     
     let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Pizza")
@@ -201,35 +195,9 @@ class PizzaViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-//
-//    // MARK: - Navigation
-//
-//    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using segue.destinationViewController.
-//        // Pass the selected object to the new view controller.
-//    }
   
-//  func prepareForSegue (segue: UIStoryboardSegue, sender: AnyObject?) {
-//    if let identifier = segue.identifier {
-//      switch identifier {
-//      case "Show Ingredients" :
-//        if let cell = sender as? MyTableViewCell,
-//          let indexPath = tableView.indexPathForCell(cell),
-//          let seguedToMVC = segue.destinationViewController as? MyVC {
-//
-//        }
-//      default: break
-//      }
-//    }
-//  }
   
   func save(name: String) {
-//    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-//      return
-//    }
     
     let managedContext = coreDataStack.managedContext
     

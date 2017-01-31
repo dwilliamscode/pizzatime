@@ -18,44 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
-
-//    let rootViewController = window!.rootViewController as! UINavigationController
-//    let pizzasViewController = rootViewController.topViewController as! PizzaViewController
-//    pizzasViewController.store = PizzaStore()
-    
-//    guard let navController = window?.rootViewController as? UINavigationController,
-//      let viewController = navController.topViewController as? PizzaViewController else {
-//    return true
-//    }
-//    viewController.managedContext = coreDataStack.managedContext
-    
-    // Save test pizza
-    let pizza = NSEntityDescription.insertNewObject(
-      forEntityName: "Pizza",
-      into: coreDataStack.managedContext) as! Pizza
-    pizza.name = "pizza7"
-    pizza.isFavorite = false
-    
-    // Retrieve test bow tie
-    do {
-      let request = NSFetchRequest<Pizza>(entityName: "Pizza")
-      let pizzas =
-        try coreDataStack.managedContext.fetch(request)
-      let sample = pizzas.first
-      print("Name :\(sample?.name)")
-    } catch let error as NSError {
-      print("Fetching error: \(error), \(error.userInfo)")
-    }
-    
-    // Override point for customization after application launch.
-//    let splitViewController = self.window!.rootViewController as! UISplitViewController
-//    let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
-//    navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
-//    splitViewController.delegate = self
-//    
-//    let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
-//    let controller = masterNavigationController.topViewController as! MasterViewController
-//    controller.managedObjectContext = self.persistentContainer.viewContext
     
     return true
   }
