@@ -65,59 +65,59 @@ class PizzaViewController: UITableViewController {
     let alert = UIAlertController(title: "New Name", message: "Add a new Pizza", preferredStyle: .alert)
     let saveAction = UIAlertAction(title: "Save",
                                    style: .default) {
-      [unowned self] action in
+                                    [unowned self] action in
                                     
-      guard let textField = alert.textFields?.first,
-        let nameToSave = textField.text else {
-          return
-      }
-      self.save(name: nameToSave)
-      self.tableView.reloadData()
+                                    guard let textField = alert.textFields?.first,
+                                      let nameToSave = textField.text else {
+                                        return
+                                    }
+                                    self.save(name: nameToSave)
+                                    self.tableView.reloadData()
     }
     let cancelAction = UIAlertAction(title: "Cancel", style: .default)
     alert.addTextField()
     alert.addAction(saveAction)
     alert.addAction(cancelAction)
     present(alert, animated: true)
-  
+    
   }
   
   var managedContext: NSManagedObjectContext!
   
   var currentPizza: Pizza?
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      
-      tableView.dataSource = pizzaDataSource
-      tableView.delegate = self
-      
-      self.updateDataSource()
-
-      
-      title = "Pizza Configurations"
-      tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-
-        // Do any additional setup after loading the view.
-      
-//      let pizzaName = "Pepperoni"
-//      let pizzaFetch: NSFetchRequest<Pizza> = Pizza.fetchRequest()
-//      pizzaFetch.predicate = NSPredicate(format: "%K == %@", keyPath(Pizza.name), pizzaName)
-//      
-//      do {
-//        let results = try managedContext.fetch(pizzaFetch)
-//        if results > 0 {
-//          // Pepperoini found, use Pepperoni
-//          currentPizza = results.first
-//        } else {
-//          currentPizza = Pizza(context: managedContext)
-//          currentPizza?.name = pizzaName
-//          try managedContext.save()
-//        }
-//      } catch let error as NSError {
-//        print("Fetch error: \(error) description: \(error.userInfo)")
-//      }
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    tableView.dataSource = pizzaDataSource
+    tableView.delegate = self
+    
+    self.updateDataSource()
+    
+    
+    title = "Pizza Configurations"
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    
+    // Do any additional setup after loading the view.
+    
+    //      let pizzaName = "Pepperoni"
+    //      let pizzaFetch: NSFetchRequest<Pizza> = Pizza.fetchRequest()
+    //      pizzaFetch.predicate = NSPredicate(format: "%K == %@", keyPath(Pizza.name), pizzaName)
+    //
+    //      do {
+    //        let results = try managedContext.fetch(pizzaFetch)
+    //        if results > 0 {
+    //          // Pepperoini found, use Pepperoni
+    //          currentPizza = results.first
+    //        } else {
+    //          currentPizza = Pizza(context: managedContext)
+    //          currentPizza?.name = pizzaName
+    //          try managedContext.save()
+    //        }
+    //      } catch let error as NSError {
+    //        print("Fetch error: \(error) description: \(error.userInfo)")
+    //      }
+  }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     switch segue.identifier {
@@ -130,7 +130,7 @@ class PizzaViewController: UITableViewController {
       ingredientController.pizza = pizzaDataSource.pizzas[(selectedIndexPath?.row)!]
       IngredientDataSource.pizza = currentPizza
       for i in pizzaDataSource.pizzas[(selectedIndexPath?.row)!].ingredients! {
-          print(i)
+        print(i)
       }
       
     default:
@@ -190,12 +190,11 @@ class PizzaViewController: UITableViewController {
     
     
   }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
   
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
   
   func save(name: String) {
     
@@ -211,7 +210,7 @@ class PizzaViewController: UITableViewController {
       try managedContext.save()
       pizzas.append(pizza)
     } catch let error as NSError {
-        print("Could not save. \(error), \(error.userInfo)")
+      print("Could not save. \(error), \(error.userInfo)")
     }
   }
   
@@ -235,13 +234,12 @@ class PizzaViewController: UITableViewController {
       switch pizzasResult {
       case let .success(pizzas):
         self.pizzaDataSource.pizzas = pizzas
-       case let .failure(error): print("Error fetching pizzas: \(error).")
+      case let .failure(error): print("Error fetching pizzas: \(error).")
       }
       self.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
       
     }
   }
-
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return pizzas.count
@@ -255,7 +253,6 @@ class PizzaViewController: UITableViewController {
     
     return cell
   }
-
   
 }
 
