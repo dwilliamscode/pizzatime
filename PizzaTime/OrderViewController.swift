@@ -46,7 +46,7 @@ class OrderViewController: UITableViewController {
                 if let top = value as? NSArray {
                   print ("number of items in array of dictionary \(top.count)")
                   print("Set count \(OrderViewController.topping.ingredients.count)")
-                  var currentOrder = Order()
+                  let currentOrder = Order()
                   currentOrder.toppings = Set()
                   for i in top {
                     print("\(i)")

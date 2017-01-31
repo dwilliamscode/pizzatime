@@ -221,7 +221,7 @@ class PizzaViewController: UITableViewController {
       switch pizzasResult {
       case let .success(pizzas):
         self.pizzaDataSource.pizzas = pizzas
-      case let .failure(error):
+      case let .failure(_):
         self.pizzaDataSource.pizzas.removeAll()
       }
       self.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)

@@ -34,7 +34,7 @@ class IngredientViewController: UITableViewController {
     
         newIngredient.setValue(ingredientName, forKey: "name")
         //let ingredients = self.pizza.ingredients?.mutableSetValue(forKey: "ingredients")
-        print(self.pizza.name)
+        //print(self.pizza.name ?? <#default value#>)
         
         //ingredients?.add(newIngredient)
         newIngredient.pizza = self.pizza
