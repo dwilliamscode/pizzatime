@@ -130,19 +130,19 @@ class IngredientViewController: UITableViewController {
     
     let ingredient = ingredientDataSource.ingredients[indexPath.row]
     
-    if let index = selectedIndexPaths.index(of: indexPath) {
-      selectedIndexPaths.remove(at: index)
-      pizza.removeFromIngredients(ingredient)
-    } else {
-      selectedIndexPaths.append(indexPath)
-      pizza.addToIngredients(ingredient)
-    }
-    
-    do {
-      try store.persistentContainer.viewContext.save()
-    } catch {
-      print("Core Data save failed:  \(error).")
-    }
+//    if let index = selectedIndexPaths.index(of: indexPath) {
+//      selectedIndexPaths.remove(at: index)
+//      pizza.removeFromIngredients(ingredient)
+//    } else {
+//      selectedIndexPaths.append(indexPath)
+//      pizza.addToIngredients(ingredient)
+//    }
+//    
+//    do {
+//      try store.persistentContainer.viewContext.save()
+//    } catch {
+//      print("Core Data save failed:  \(error).")
+//    }
     
     tableView.reloadRows(at: [indexPath], with: .automatic)
   }

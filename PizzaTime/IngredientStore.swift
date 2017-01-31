@@ -20,20 +20,5 @@ class IngredientStore {
     }
     return container
   }()
-  
-//  func fetchAllIngredients(completion: @escaping (PizzaStore.IngredientsResult)-> Void) {
-//    let fetchRequest: NSFetchRequest<Ingredient> = Ingredient.fetchRequest()
-//    let sortByName = NSSortDescriptor(key: #keyPath(Ingredient.name), ascending: true)
-//    fetchRequest.sortDescriptors = [sortByName]
-//    
-//    let viewContext = persistentContainer.viewContext
-//    viewContext.perform {
-//      do {
-//        let allIngredients = try fetchRequest.execute()
-//        completion(.success(allIngredients))
-//      } catch {
-//        completion(.failure(error))
-//      }
-//    }
-//  }
+
 }

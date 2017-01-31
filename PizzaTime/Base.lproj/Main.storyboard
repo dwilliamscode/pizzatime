@@ -388,7 +388,7 @@
             </objects>
             <point key="canvasLocation" x="4306" y="2767"/>
         </scene>
-        <!--Pizzas-->
+        <!--Pizza-->
         <scene sceneID="CLv-K5-KuX">
             <objects>
                 <tableViewController id="HAI-yd-rOG" customClass="PizzaViewController" customModule="PizzaTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -414,7 +414,7 @@
                             <outlet property="delegate" destination="HAI-yd-rOG" id="95I-rz-ahI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Pizzas" id="Xlx-Oz-wqq">
+                    <navigationItem key="navigationItem" title="Pizza" id="Xlx-Oz-wqq">
                         <barButtonItem key="leftBarButtonItem" title="Done" id="EqE-bg-rEB">
                             <connections>
                                 <action selector="done:" destination="HAI-yd-rOG" id="EUQ-Qf-QVX"/>
