@@ -22,21 +22,12 @@ class OrderViewController: UITableViewController {
     super.viewDidLoad()
     topListedOrders = UserDefaults.standard.integer(forKey: "TopOrderListCount")
     
-    var tempToppings = Set<String>()
     var arrToppings = [Set<String>]()
-    var tempUniqueToppings = [Set<String>]()
     
-    var newToppingsList = [NSArray : Int]()
-    var previousOrder = Order()
-    var tempOrder = Order()
     var listOfOrders = [Order]()
     
-    
-    
-    var firstTime = true
     var cnt = 0
     
-    var buffer = [Set<String>]()
     var added = [Set<String>]()
     
     
