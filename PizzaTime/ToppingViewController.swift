@@ -15,12 +15,6 @@ class ToppingViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     topping.ingredients = OrderViewController.topping.ingredients
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = false
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem()
   }
   
   override func didReceiveMemoryWarning() {
@@ -40,16 +34,15 @@ class ToppingViewController: UITableViewController {
     return topping.ingredients.count
   }
   
-  
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
+    // Configure the cell...
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
     
     let label = cell.viewWithTag(1000) as! UILabel
     
     label.text = topping.list[indexPath.row] as? String
     
-    // Configure the cell...
     return cell
     
   }

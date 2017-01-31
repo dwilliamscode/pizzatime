@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import XCTest
-import PizzaManager
+//import XCTest
+//import PizzaManager
 import CoreData
 
 class PizzaServiceTests: XCTestCase {
