@@ -16,7 +16,7 @@ class OrderViewController: UITableViewController {
   var topPizzas = 20
   var twenty = 20
   var topListedOrders = UserDefaults.standard.integer(forKey: "TopOrderListCount")
-
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -180,11 +180,11 @@ class OrderViewController: UITableViewController {
     // #warning Incomplete implementation, return the number of sections
     return 1
   }
-
+  
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // #warning Incomplete implementation, return the number of rows
-   
+    
     let newTop = UserDefaults.standard.integer(forKey: "TopOrderListCount")
     
     if newTop != -1 {
@@ -194,9 +194,9 @@ class OrderViewController: UITableViewController {
     }
   }
   
-
+  
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-   
+    
     let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
     
     let pizza = listOfUniqueOrders[indexPath.row]
@@ -208,15 +208,15 @@ class OrderViewController: UITableViewController {
     
     label.text = stringValue
     labelAmount.text = String("\(pizza.numberOfTimesOrdered)")
-   
+    
     // Configure the cell...
     return cell
   }
   
   /*
-    Override to support conditional editing of the table view.
+   Override to support conditional editing of the table view.
    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-    Return false if you do not want the specified item to be editable.
+   Return false if you do not want the specified item to be editable.
    return true
    }
    */
@@ -258,6 +258,6 @@ class OrderViewController: UITableViewController {
    }
    */
   
-
+  
 }
 

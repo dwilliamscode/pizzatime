@@ -19,7 +19,7 @@ class IngredientDataSource: NSObject, UITableViewDataSource {
     return (IngredientDataSource.pizza.ingredients?.count)!
     
   }
-
+  
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)

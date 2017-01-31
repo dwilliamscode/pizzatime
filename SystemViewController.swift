@@ -9,7 +9,7 @@
 import UIKit
 
 class SystemViewController: UIViewController {
-
+  
   
   @IBOutlet weak var topListingTextbox: UITextField!
   @IBOutlet weak var topListingStepper: UIStepper!
@@ -20,20 +20,20 @@ class SystemViewController: UIViewController {
     UserDefaults.standard.set(Int(topListingStepper.value), forKey: "TopOrderListCount")
   }
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      
-        topListingTextbox.text = String(UserDefaults.standard.integer(forKey: "TopOrderListCount"))
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
+    topListingTextbox.text = String(UserDefaults.standard.integer(forKey: "TopOrderListCount"))
+    // Do any additional setup after loading the view.
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+  
   override func viewWillDisappear(_ animated: Bool) {
     UserDefaults.standard.set(Int(topListingStepper.value), forKey: "TopOrderListCount")
   }
-
+  
 }
