@@ -36,9 +36,6 @@
 		533DF8901E3AA4FD00C86726 /* PizzaStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaStore.swift; sourceTree = "<group>"; };
 		533DF8921E3ABC2800C86726 /* PizzaDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaDataSource.swift; sourceTree = "<group>"; };
 		533DF8941E3AC82000C86726 /* IngredientStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientStore.swift; sourceTree = "<group>"; };
-		534E67B51E402F6400653B0C /* TestCoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
-		534E67B91E4032F100653B0C /* PizzaTimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaTimeTests.swift; sourceTree = "<group>"; };
-		534E67BB1E4034EB00653B0C /* PizzaServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaServiceTests.swift; sourceTree = "<group>"; };
 		535D958F1E304D34009D3E38 /* PizzaTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		535D95921E304D34009D3E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		535D95941E304D34009D3E38 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
@@ -72,24 +69,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		534E67B71E40329C00653B0C /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				534E67B81E4032B700653B0C /* Unit Tests */,
-			);
-			name = Services;
-			sourceTree = "<group>";
-		};
-		534E67B81E4032B700653B0C /* Unit Tests */ = {
-			isa = PBXGroup;
-			children = (
-				534E67B51E402F6400653B0C /* TestCoreDataStack.swift */,
-				534E67B91E4032F100653B0C /* PizzaTimeTests.swift */,
-				534E67BB1E4034EB00653B0C /* PizzaServiceTests.swift */,
-			);
-			name = "Unit Tests";
-			sourceTree = "<group>";
-		};
 		535D95861E304D34009D3E38 = {
 			isa = PBXGroup;
 			children = (
@@ -122,7 +101,6 @@
 				535D959E1E304D35009D3E38 /* Info.plist */,
 				535D95A41E304EF9009D3E38 /* iOS Take Home Assignment.json */,
 				5396CF3D1E368C690058AF9E /* PizzaTimeModel.xcdatamodeld */,
-				534E67B71E40329C00653B0C /* Services */,
 				53A209C81E38469A00D18D97 /* Ingredient+CoreDataClass.swift */,
 				53A209C91E38469A00D18D97 /* Ingredient+CoreDataProperties.swift */,
 				53A209CA1E38469A00D18D97 /* Pizza+CoreDataClass.swift */,
