@@ -59,29 +59,7 @@ class PizzaViewController: UITableViewController {
     
     present(alertController, animated: true, completion: nil)
   }
-  
-  // Implement the addName IBAction
-  @IBAction func addName(_ sender: UIBarButtonItem) {
-    let alert = UIAlertController(title: "New Name", message: "Add a new Pizza", preferredStyle: .alert)
-    let saveAction = UIAlertAction(title: "Save",
-                                   style: .default) {
-                                    [unowned self] action in
-                                    
-                                    guard let textField = alert.textFields?.first,
-                                      let nameToSave = textField.text else {
-                                        return
-                                    }
-                                    self.save(name: nameToSave)
-                                    self.tableView.reloadData()
-    }
-    let cancelAction = UIAlertAction(title: "Cancel", style: .default)
-    alert.addTextField()
-    alert.addAction(saveAction)
-    alert.addAction(cancelAction)
-    present(alert, animated: true)
     
-  }
-  
   var managedContext: NSManagedObjectContext!
   
   var currentPizza: Pizza?
@@ -196,7 +174,7 @@ class PizzaViewController: UITableViewController {
       switch pizzasResult {
       case let .success(pizzas):
         self.pizzaDataSource.pizzas = pizzas
-      case let .failure(_):
+      case .failure(_):
         self.pizzaDataSource.pizzas.removeAll()
       }
       self.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
