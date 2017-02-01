@@ -98,25 +98,6 @@ class PizzaViewController: UITableViewController {
     title = "Pizza Configurations"
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     
-    // Do any additional setup after loading the view.
-    
-    //      let pizzaName = "Pepperoni"
-    //      let pizzaFetch: NSFetchRequest<Pizza> = Pizza.fetchRequest()
-    //      pizzaFetch.predicate = NSPredicate(format: "%K == %@", keyPath(Pizza.name), pizzaName)
-    //
-    //      do {
-    //        let results = try managedContext.fetch(pizzaFetch)
-    //        if results > 0 {
-    //          // Pepperoini found, use Pepperoni
-    //          currentPizza = results.first
-    //        } else {
-    //          currentPizza = Pizza(context: managedContext)
-    //          currentPizza?.name = pizzaName
-    //          try managedContext.save()
-    //        }
-    //      } catch let error as NSError {
-    //        print("Fetch error: \(error) description: \(error.userInfo)")
-    //      }
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
