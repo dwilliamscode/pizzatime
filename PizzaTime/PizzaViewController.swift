@@ -129,10 +129,6 @@ class PizzaViewController: UITableViewController {
       currentPizza = pizzaDataSource.pizzas[(selectedIndexPath?.row)!]
       ingredientController.pizza = pizzaDataSource.pizzas[(selectedIndexPath?.row)!]
       IngredientDataSource.pizza = currentPizza
-      for i in pizzaDataSource.pizzas[(selectedIndexPath?.row)!].ingredients! {
-        print(i)
-      }
-      
     default:
       preconditionFailure("Unexpected segue identifier.")
     }
@@ -187,7 +183,6 @@ class PizzaViewController: UITableViewController {
     } catch let error as NSError {
       print("Could not fetch. \(error), \(error.userInfo)")
     }
-    
     
   }
   

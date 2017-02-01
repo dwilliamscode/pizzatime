@@ -66,9 +66,6 @@ class IngredientViewController: UITableViewController {
     tableView.dataSource = ingredientDataSource
     tableView.delegate = self
     
-    print("Pizza name is \(pizza.name)")
-    print("Made it here with no pizza")
-    
     updateIngredients()
     
     self.updateDataSource()

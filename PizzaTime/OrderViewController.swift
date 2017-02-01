@@ -37,28 +37,27 @@ class OrderViewController: UITableViewController {
         let jsonData = try NSData(contentsOfFile: path, options:NSData.ReadingOptions.mappedIfSafe)
         do {
           let jsonResult: NSArray = try JSONSerialization.jsonObject(with: jsonData as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSArray
-          print ("number of items in array \(jsonResult.count)")
+          
+          // traverse the array of dictionaries
           for item in jsonResult {
             if let ingredients = item as? NSDictionary {
-              for (key, value) in ingredients {
-                
-                print ("\(key)")
+              for (_, value) in ingredients {
+  
+                // traverse each Pizza Order
                 if let top = value as? NSArray {
-                  print ("number of items in array of dictionary \(top.count)")
-                  print("Set count \(OrderViewController.topping.ingredients.count)")
+                  
+                  // create an Pizza Order to hold the toppings
                   let currentOrder = Order()
                   currentOrder.toppings = Set()
+                  // traverse each topping for the current Pizza Order
                   for i in top {
-                    print("\(i)")
                     currentOrder.toppings.insert(i as! String)
                     if OrderViewController.topping.ingredients.contains(i as! String) {
-                      print("Already exists - not adding")
                     } else {
-                      print("This is new: \(i) - adding this one")
                       OrderViewController.topping.ingredients.insert(i as! String)
                     }
-                    print("Unique Toppings = \(OrderViewController.topping.ingredients.count)")
                   }
+                  
                   arrToppings.insert(currentOrder.toppings, at: cnt)
                   cnt = cnt + 1
                   listOfOrders.append(currentOrder)
@@ -66,10 +65,10 @@ class OrderViewController: UITableViewController {
               }
             }
           }
-          print ("Here are the Unique \(OrderViewController.topping.ingredients.count) Toppings")
-          for t in OrderViewController.topping.ingredients {
-            print("\(t)")
-          }
+//          print ("Here are the Unique \(OrderViewController.topping.ingredients.count) Toppings")
+//          for t in OrderViewController.topping.ingredients {
+//            print("\(t)")
+//          }
           
           var newOrder = Order()
           for elem in arrToppings {
@@ -92,16 +91,14 @@ class OrderViewController: UITableViewController {
           
           listOfUniqueOrders = listOfUniqueOrders.sorted(by: { $0.numberOfTimesOrdered > $1.numberOfTimesOrdered })
           
-          print ("Here are the Unique Orders")
-          for o in listOfUniqueOrders[0..<20] {
-            print ("\(o.toppings) and \(o.numberOfTimesOrdered)")
-          }
+//          print ("Here are the Unique Orders")
+//          for o in listOfUniqueOrders[0..<20] {
+//            print ("\(o.toppings) and \(o.numberOfTimesOrdered)")
+//          }
           
         } catch { print ("Could not read the JSON file")}
       } catch { print ("Could not create the Initial Array from the JSON file")}
     }
-    
-    print("hello")
     
   }
   
@@ -122,7 +119,7 @@ class OrderViewController: UITableViewController {
     // #warning Incomplete implementation, return the number of sections
     return 1
   }
-  
+
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // #warning Incomplete implementation, return the number of rows
     
